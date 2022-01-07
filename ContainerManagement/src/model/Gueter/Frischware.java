@@ -6,13 +6,13 @@ public class Frischware extends Gueter {
     int haltbarkeit;
 
 
-    public Frischware(int gutnummer, int haltbarkeit){
-        super(gutnummer);
+    public Frischware(int gutnummer, double gewicht, int haltbarkeit){
+        super(gutnummer, gewicht);
         setHaltbarkeit(haltbarkeit);
     }
 
     public String getGutTyp() {
-        return "Dies ist eine Frischware, sie ist haltbar bis: " + getHaltbarkeit() + "!";
+        return "Die Güternummer ist: " + getGutnummer() + ". Dies ist eine Frischware, sie ist haltbar bis: " + getHaltbarkeit() + "! Es ist " + getGewicht() + "kg schwer.";
     }
     
 

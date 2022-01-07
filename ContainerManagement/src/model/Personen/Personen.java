@@ -1,6 +1,6 @@
 package model.Personen;
 
-public class Personen {
+public abstract class Personen {
 
     String vorname;
     String nachname;
@@ -18,6 +18,8 @@ public class Personen {
         setVorname(vorname);
         setNachname(nachname);
     }
+
+    public abstract String getPersonenTyp();
 
 
     /**

@@ -3,16 +3,14 @@ package model.Gueter;
 public class Gefahrengut extends Gueter{
     
     int gefahrenlevel;
-    int bensicherheitslevel;
-
-    public Gefahrengut(int gutnummer, int gefahrenlevel, int bensicherheitslevel){
-        super(gutnummer);
+    
+    public Gefahrengut(int gutnummer, int bensicherheitslevel, int gefahrengut) {
+        super(gutnummer, bensicherheitslevel);
         setGefahrenlevel(gefahrenlevel);
-        setBensicherheitslevel(bensicherheitslevel);
     }
 
     public String getGutTyp() {
-        return "Dies ist Gefahrengut, es hat das Gefahrenlevel " + getGefahrenlevel() + ", außerdem braucht es das Sicherheitslevel" + getBensicherheitslevel();
+        return "Die Güternummer ist: " + getGutnummer() + ". Dies ist Gefahrengut, es hat das Gefahrenlevel " + getGefahrenlevel() + ", außerdem braucht es das Sicherheitslevel" + getBensicherheitslevel() + ", es ist " + getGewicht() + "kg schwer.";
     }
 
     /**

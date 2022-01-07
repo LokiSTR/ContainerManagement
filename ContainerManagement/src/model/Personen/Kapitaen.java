@@ -1,7 +1,5 @@
 package model.Personen;
 
-import model.Personen.Personen;
-
 public class Kapitaen extends Personen{
 
     int gefahrenefahrten;
@@ -10,6 +8,10 @@ public class Kapitaen extends Personen{
         super(vorname, nachname, personalnummer);
     }
 
+    
+    public String getPersonenTyp() {
+        return "Diese Person ist der Kapitän. Sie hat die Personalnummer " + getPersonalnummer() + ", ihr Name ist " + getVorname() + " " + getNachname();
+    }
     
     /**
      * 
