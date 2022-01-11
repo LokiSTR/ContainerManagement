@@ -7,6 +7,6 @@ public class ZivilPersonen extends Personen{
     }
 
     public String getPersonenTyp() {
-        return "Diese Person ist einer Zivilperson, ihr Name ist " + getVorname() + " " + getNachname();
+        return "Diese Person ist einer Zivilperson, ihr Name ist " + getName();
     }    
 }

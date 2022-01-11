@@ -45,4 +45,9 @@ public abstract class Personen {
     public String getVorname() {
         return vorname;
     }
+
+    // Ausgabe ganzer Name
+    public String getName() {
+        return getVorname() + " "+ getNachname();
+    }
 }

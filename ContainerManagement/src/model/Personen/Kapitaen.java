@@ -10,7 +10,7 @@ public class Kapitaen extends Personen{
 
     
     public String getPersonenTyp() {
-        return "Diese Person ist der Kapitän. Sie hat die Personalnummer " + getPersonalnummer() + ", ihr Name ist " + getVorname() + " " + getNachname();
+        return "Diese Person ist der Kapitän. Sie hat die Personalnummer " + getPersonalnummer() + ", ihr Name ist " + getName();
     }
     
     /**
