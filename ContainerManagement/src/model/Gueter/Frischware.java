@@ -1,19 +1,26 @@
 package model.Gueter;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Frischware extends Gueter {
 
     //Vielleicht eine andere Zeiteinheit?
-    int haltbarkeit;
+    Date haltbarkeit;
+    SimpleDateFormat sdf;
 
 
-    public Frischware(int gutnummer, double gewicht, int haltbarkeit){
+    public Frischware(int gutnummer, double gewicht, String haltbarkeit){
         super(gutnummer, gewicht);
-        setHaltbarkeit(haltbarkeit);
+        setSdf(new SimpleDateFormat("dd.MM.yyyy"));
+        try {
+            setHaltbarkeit(sdf.parse(haltbarkeit));
+        } catch (ParseException ex) {
+            ex.printStackTrace();
+        }
     }
 
-    public String getGutTyp() {
-        return "Die Güternummer ist: " + getGutnummer() + ". Dies ist eine Frischware, sie ist haltbar bis: " + getHaltbarkeit() + "! Es ist " + getGewicht() + "kg schwer.";
-    }
     
 
     /**
@@ -21,10 +28,16 @@ public class Frischware extends Gueter {
      * SETTER UND GETTER
      */
 
-    public void setHaltbarkeit(int haltbarkeit) {
-        this.haltbarkeit = haltbarkeit;
-    }
-    public int getHaltbarkeit() {
-        return haltbarkeit;
-    }
+     public void setHaltbarkeit(Date haltbarkeit) {
+         this.haltbarkeit = haltbarkeit;
+     }
+     public Date getHaltbarkeit() {
+         return haltbarkeit;
+     }
+     public void setSdf(SimpleDateFormat sdf) {
+         this.sdf = sdf;
+     }
+     public SimpleDateFormat getSdf() {
+         return sdf;
+     }
 }

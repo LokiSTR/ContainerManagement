@@ -2,7 +2,7 @@ package model.Personen;
 
 public class Kapitaen extends Personen{
 
-    int gefahrenefahrten;
+    int gefahreneFahrten;
 
     public Kapitaen(String vorname, String nachname, int personalnummer) {
         super(vorname, nachname, personalnummer);
@@ -18,10 +18,10 @@ public class Kapitaen extends Personen{
      * SETTER UND GETTER
      */
 
-    public void setGefahreneFahrten(int gefahrenefahrten) {
-        this.gefahrenefahrten = gefahrenefahrten;
+    public void setgefahreneFahrten(int gefahreneFahrten) {
+        this.gefahreneFahrten = gefahreneFahrten;
     }
-    public int getGefahreneFahrten() {
-        return gefahrenefahrten;
+    public int getgefahreneFahrten() {
+        return gefahreneFahrten;
     }
 }

@@ -9,10 +9,6 @@ public class Wertgegenstaende extends Gueter{
         setWert(wert);
     }
 
-    public String getGutTyp() {
-        return "Die Güternummer ist: " + getGutnummer() + ". Das gut ist ein Wertgegenstand mit einem Gegenwert von " + getWert() + "$: Deshalb benötigt es das Sicherheitslevel " + getBensicherheitslevel() + ", es ist " + getGewicht() + "kg schwer.";
-    }
-
 
     /**
      * 

@@ -9,9 +9,6 @@ public class Tiere extends Gueter{
         setTierart(tierart);
     }
 
-    public String getGutTyp() {
-       return "Die Güternummer ist: " + getGutnummer() + ". Dies ist ein " + getTierart() + ", es ist " + getGewicht() + "kg schwer.";
-    }
 
     /**
      * 

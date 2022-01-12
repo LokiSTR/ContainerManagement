@@ -9,9 +9,6 @@ public class Gefahrengut extends Gueter{
         setGefahrenlevel(gefahrenlevel);
     }
 
-    public String getGutTyp() {
-        return "Die Güternummer ist: " + getGutnummer() + ". Dies ist Gefahrengut, es hat das Gefahrenlevel " + getGefahrenlevel() + ", außerdem braucht es das Sicherheitslevel" + getBensicherheitslevel() + ", es ist " + getGewicht() + "kg schwer.";
-    }
 
     /**
      * 

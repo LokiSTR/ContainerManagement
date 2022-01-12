@@ -4,7 +4,7 @@ Plan
 Gepäck muss einem Schiff zugeordnet sein
     Schiffe erstellen
 (Containersimulation 🙂)
-Schiffsrouten (Start und Ziel, Zeit, Kilometer) -> neues Model
+//Schiffsrouten (Start und Ziel, Zeit, Kilometer) -> neues Model
 Ich möchte einen Container von A nach B schicken inkl. Preis, welches Schiff, welche Route, wann ist der Container da, wie schwer ist er usw
 
 Preisberechnung -> Gutart, Gewicht, Route

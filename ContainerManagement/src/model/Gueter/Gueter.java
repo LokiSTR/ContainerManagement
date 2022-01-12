@@ -17,7 +17,6 @@ public abstract class Gueter {
         setGewicht(gewicht);
     }
 
-    public abstract String getGutTyp();
 
     /**
      * 
