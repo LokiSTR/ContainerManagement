@@ -19,7 +19,13 @@ public abstract class Personen {
         setNachname(nachname);
     }
 
+    //Zur Ausgabe des Typs
     public abstract String getPersonenTyp();
+
+    // Ausgabe ganzer Name
+    public String getName() {
+        return getVorname() + " "+ getNachname();
+    }
 
 
     /**
@@ -44,10 +50,5 @@ public abstract class Personen {
     }
     public String getVorname() {
         return vorname;
-    }
-
-    // Ausgabe ganzer Name
-    public String getName() {
-        return getVorname() + " "+ getNachname();
     }
 }
