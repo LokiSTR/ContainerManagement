@@ -1,7 +1,5 @@
 package model.Transport;
 
-public class Transport {
+public class Route {
     
-    
-
 }
