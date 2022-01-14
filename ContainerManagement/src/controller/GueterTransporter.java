@@ -52,10 +52,11 @@ public class GueterTransporter extends ClassController{
     public void addNewWertgegenstaende(String gutnummer, String bensicherheitslevel, String gewicht, String inhalt, String wert) {
         //Neue Wertgegenstände
         Wertgegenstaende wg = new Wertgegenstaende(Integer.parseInt(gutnummer), Integer.parseInt(bensicherheitslevel), Double.parseDouble(gewicht), inhalt, Double.parseDouble(wert));
+        getGueterAr().add(wg);
     }
 
     public void createDemodata() {
-        
+        //TODO: Demodaten schreiben
         
     }
 

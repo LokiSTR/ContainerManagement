@@ -1,20 +1,20 @@
 package model.Personen;
 
-public abstract class Personen {
+public abstract class Person {
 
     String vorname;
     String nachname;
     int personalnummer;
 
 
-    public Personen(String vorname, String nachname, int personalnummer){
+    public Person(String vorname, String nachname, int personalnummer){
         setVorname(vorname);
         setNachname(nachname);
         setPersonalnummer(personalnummer);
     }
 
 
-    public Personen(String vorname, String nachname){
+    public Person(String vorname, String nachname){
         setVorname(vorname);
         setNachname(nachname);
     }

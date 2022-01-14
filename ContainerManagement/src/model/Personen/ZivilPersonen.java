@@ -1,6 +1,6 @@
 package model.Personen;
 
-public class ZivilPersonen extends Personen{
+public class ZivilPersonen extends Person{
 
     public ZivilPersonen(String vorname, String nachname) {
         super(vorname, nachname);

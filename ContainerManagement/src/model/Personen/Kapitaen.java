@@ -1,6 +1,6 @@
 package model.Personen;
 
-public class Kapitaen extends Personen{
+public class Kapitaen extends Person{
 
     int gefahreneFahrten;
 
