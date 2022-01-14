@@ -5,16 +5,19 @@ public abstract class Gueter {
     int gutnummer;
     int bensicherheitslevel;
     double gewicht;
+    String inhalt;
 
-    public Gueter(int gutnummer, double gewicht){
+    public Gueter(int gutnummer, double gewicht, String inhalt){
         setGutnummer(gutnummer);
         setGewicht(gewicht);
+        setInhalt(inhalt);
     }
 
-    public Gueter(int gutnummer, int bensicherheitslevel, double gewicht){
+    public Gueter(int gutnummer, int bensicherheitslevel, double gewicht, String inahlt){
         setGutnummer(gutnummer);
         setBensicherheitslevel(bensicherheitslevel);
         setGewicht(gewicht);
+        setInhalt(inhalt);
     }
 
 
@@ -32,6 +35,9 @@ public abstract class Gueter {
     public void setGewicht(double gewicht) {
         this.gewicht = gewicht;
     }
+    public void setInhalt(String inhalt) {
+        this.inhalt = inhalt;
+    }
 
     public int getGutnummer() {
         return gutnummer;
@@ -41,5 +47,8 @@ public abstract class Gueter {
     }
     public double getGewicht() {
         return gewicht;
+    }
+    public String getInhalt() {
+        return inhalt;
     }
 }

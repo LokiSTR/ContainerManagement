@@ -2,11 +2,11 @@ package model.Gueter;
 
 public class Gefahrengut extends Gueter{
     
-    int gefahrenlevel;
+    String inhalt;
     
-    public Gefahrengut(int gutnummer, int bensicherheitslevel, int gefahrengut) {
-        super(gutnummer, bensicherheitslevel);
-        setGefahrenlevel(gefahrenlevel);
+    public Gefahrengut(int gutnummer, int bensicherheitslevel, String inhalt) {
+        super(gutnummer, bensicherheitslevel, inhalt);
+        setInhalt(inhalt);
     }
 
 
@@ -14,17 +14,16 @@ public class Gefahrengut extends Gueter{
      * 
      * SETTER UND GETTER
      */
-    
-    public void setGefahrenlevel(int gefahrenlevel) {
-        this.gefahrenlevel = gefahrenlevel;
-    }
     public void setBensicherheitslevel(int bensicherheitslevel) {
         this.bensicherheitslevel = bensicherheitslevel;
     }
     public int getBensicherheitslevel() {
         return bensicherheitslevel;
     }
-    public int getGefahrenlevel() {
-        return gefahrenlevel;
+    public void setInhalt(String inhalt) {
+        this.inhalt = inhalt;
+    }
+    public String getInhalt() {
+        return inhalt;
     }
 }
