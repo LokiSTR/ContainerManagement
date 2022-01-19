@@ -1,5 +1,8 @@
 package model.Transport;
 
+import java.util.ArrayList;
+
+import model.Gueter.Gueter;
 import model.Personen.Kapitaen;
 
 public class Schiff {
@@ -10,6 +13,9 @@ public class Schiff {
     boolean gefahrengut;
     boolean tiere;
     boolean wertgegenstaende;
+    //Arraylist mit Angaben darüber, welche Güter mit diesem Schiff transportiert werden können
+    //TODO
+    ArrayList<Gueter> gut_zulassungen;
 
     public Schiff(int maxZuladung, Kapitaen kapitaen, boolean frischware, boolean gefahrengut, boolean tiere,boolean wertgegenstaende) {
         setFrischware(frischware);
@@ -18,6 +24,7 @@ public class Schiff {
         setMaxZuladung(maxZuladung);
         setTiere(tiere);
         setWertgegenstaende(wertgegenstaende);
+        setGut_zulassungen(gut_zulassungen);
     }
 
     /**
@@ -49,10 +56,11 @@ public class Schiff {
      public void setWertgegenstaende(boolean wertgegenstaende) {
          this.wertgegenstaende = wertgegenstaende;
      }
-
-
-
-
-
+     public void setGut_zulassungen(ArrayList<Gueter> gut_zulassungen) {
+         this.gut_zulassungen = gut_zulassungen;
+     }
+     public ArrayList<Gueter> getGut_zulassungen() {
+         return gut_zulassungen;
+     }
 
 }
