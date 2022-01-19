@@ -2,7 +2,9 @@ package controller;
 
 import java.util.ArrayList;
 
+import model.Personen.Kapitaen;
 import model.Personen.Person;
+import model.Personen.ZivilPerson;
 
 public class PersonenController extends ClassController {
 
@@ -13,7 +15,16 @@ public class PersonenController extends ClassController {
         setPersonen(new ArrayList<Person>());
     }
 
-    //TODO: addNew mehtoden
+    public void addNewZivilperson(String vorname, String nachname) {
+        ZivilPerson zp = new ZivilPerson(vorname, nachname);
+        getPersonen().add(zp);
+    }
+
+    public void addNewKapitaen(String vorname, String nachname, String personalnummer) {
+        Kapitaen kp = new Kapitaen(vorname, nachname, Integer.parseInt(personalnummer));
+        getPersonen().add(kp);
+    }
+
 
     @Override
     public void createDemodata() {
