@@ -4,8 +4,8 @@ public class Gefahrengut extends Gueter{
     
     String inhalt;
     
-    public Gefahrengut(int gutnummer, int bensicherheitslevel, String inhalt) {
-        super(gutnummer, bensicherheitslevel, inhalt);
+    public Gefahrengut(int bensicherheitslevel, String inhalt) {
+        super(bensicherheitslevel, inhalt);
         setInhalt(inhalt);
     }
 

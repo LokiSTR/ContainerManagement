@@ -23,6 +23,7 @@ public class Verschiffung {
         setPreis(preis);
         setRoute(route);
         setSchiff(schiff);
+        setStart(start);
         // Verrechnung der Fahrtzeit mit dem Startdatum Datum
         setAnkunft(getStart().plusDays(getRoute().getZeitDays()));
     }

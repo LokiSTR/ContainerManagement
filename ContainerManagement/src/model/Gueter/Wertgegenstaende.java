@@ -4,8 +4,8 @@ public class Wertgegenstaende extends Gueter{
 
     double wert;
 
-    public Wertgegenstaende(int gutnummer, int bensicherheitslevel, double gewicht, String inhalt, double wert) {
-        super(gutnummer, bensicherheitslevel, gewicht, inhalt);
+    public Wertgegenstaende(int bensicherheitslevel, double gewicht, String inhalt, double wert) {
+        super( bensicherheitslevel, gewicht, inhalt);
         setWert(wert);
     }
 
