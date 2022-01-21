@@ -85,26 +85,26 @@ public class GueterController extends ClassController{
             if (gut instanceof Frischware) {
                 // Umwandeln von gut in Frischware
                 Frischware f = (Frischware) gut;
-                sendOutput("\n Frischwaren: \n");
+                sendOutput("\n Frischware:");
                 sendOutput(f.getGutnummer()+"\nGewicht: "+ f.getGewicht()+" kg\nInhalt: "+ f.getInhalt()+"\nMindestens haltbar bis: "+ f.getSdf().format(f.getHaltbarkeit()));
                 //DONE: Wie kann ich Objektspezifische Eigenschaften Abrufen?
                 // Durch umwandeln des Datentyps
-            } if (gut instanceof Gefahrengut) {
+            }else if (gut instanceof Gefahrengut) {
                 //Umwandeln in Gefahrengut
                 Gefahrengut g = (Gefahrengut) gut;
-                sendOutput("\n Gefahrengüter: \n");
+                sendOutput("\n Gefahrengut:");
                 sendOutput(g.getGutnummer()+"\nGewicht: "+g.getGewicht()+"\nInhalt: "+g.getInhalt()+"\nBenötigtes Sicherheitslevel: "+ g.getSicherheitslevel());
-            }if (gut instanceof Normalgut) {
+            }else if (gut instanceof Normalgut) {
                 Normalgut n = (Normalgut) gut;
-                sendOutput("\n Normalgüter: \n");
+                sendOutput("\n Normalgut:");
                 sendOutput(n.getGutnummer()+"\nGewicht: "+n.getGewicht()+"\nInhalt: "+n.getInhalt());
-            }if (gut instanceof Tiere) {
+            }else if (gut instanceof Tiere) {
                 Tiere t = (Tiere) gut;
-                sendOutput("\n Tiere: \n");
+                sendOutput("\n Tier:");
                 sendOutput(t.getGutnummer()+"\nGewicht: "+t.getGewicht()+"\nInhalt: "+t.getInhalt()+"\nTierart: "+t.getTierart());
-            }if (gut instanceof Wertgegenstaende) {
+            }else if (gut instanceof Wertgegenstaende) {
                 Wertgegenstaende w = (Wertgegenstaende) gut;
-                sendOutput("\n Wertgegenstände: \n");
+                sendOutput("\n Wertgegenstand:");
                 sendOutput(w.getGutnummer()+"\nGewicht: "+w.getGewicht()+"\nInhalt: "+w.getInhalt()+"\nBenötigtes Sicherheitslevel: "+w.getSicherheitslevel());
             }else {
               sendOutput("Das Gut der Nummer "+gut.getGutnummer()+" kann nicht ausgegeben werden");  

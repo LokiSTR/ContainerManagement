@@ -17,7 +17,7 @@ public abstract class Gueter {
 
     }
 
-    public Gueter(int sicherheitslevel, double gewicht, String inahlt){
+    public Gueter(int sicherheitslevel, double gewicht, String inhalt){
         setsicherheitslevel(sicherheitslevel);
         setGewicht(gewicht);
         setInhalt(inhalt);
