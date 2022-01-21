@@ -3,7 +3,7 @@ package model.Gueter;
 public abstract class Gueter {
     
     int gutnummer;
-    int bensicherheitslevel;
+    int sicherheitslevel;
     double gewicht;
     String inhalt;
     static int anzahlGueter;
@@ -17,8 +17,8 @@ public abstract class Gueter {
 
     }
 
-    public Gueter(int bensicherheitslevel, double gewicht, String inahlt){
-        setBensicherheitslevel(bensicherheitslevel);
+    public Gueter(int sicherheitslevel, double gewicht, String inahlt){
+        setsicherheitslevel(sicherheitslevel);
         setGewicht(gewicht);
         setInhalt(inhalt);
         //Generator Gutnummer
@@ -35,8 +35,8 @@ public abstract class Gueter {
     public void setGutnummer(int gutnummer) {
         this.gutnummer = gutnummer;
     }
-    public void setBensicherheitslevel(int bensicherheitslevel) {
-        this.bensicherheitslevel = bensicherheitslevel;
+    public void setsicherheitslevel(int sicherheitslevel) {
+        this.sicherheitslevel = sicherheitslevel;
     }
     public void setGewicht(double gewicht) {
         this.gewicht = gewicht;
@@ -48,8 +48,8 @@ public abstract class Gueter {
     public int getGutnummer() {
         return gutnummer;
     }
-    public int getBensicherheitslevel() {
-        return bensicherheitslevel;
+    public int getSicherheitslevel() {
+        return sicherheitslevel;
     }
     public double getGewicht() {
         return gewicht;

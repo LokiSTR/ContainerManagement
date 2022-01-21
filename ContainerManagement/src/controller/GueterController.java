@@ -32,9 +32,9 @@ public class GueterController extends ClassController{
         getGueterAr().add(fw);
     }
 
-    public void addNewGefahrengut(String gutnummer, String bensicherheitslevel, String inhalt) {
+    public void addNewGefahrengut(String gutnummer, String sicherheitslevel, String inhalt) {
         //Neues Gefahrengut hinzufügen und gueterAr hinzufügen
-        Gefahrengut gg = new Gefahrengut( Integer.parseInt(bensicherheitslevel), inhalt);
+        Gefahrengut gg = new Gefahrengut( Integer.parseInt(sicherheitslevel), inhalt);
         getGueterAr().add(gg);
     }
 
@@ -50,9 +50,9 @@ public class GueterController extends ClassController{
         getGueterAr().add(t);
     }
 
-    public void addNewWertgegenstaende(String gutnummer, String bensicherheitslevel, String gewicht, String inhalt, String wert) {
+    public void addNewWertgegenstaende(String gutnummer, String sicherheitslevel, String gewicht, String inhalt, String wert) {
         //Neue Wertgegenstände
-        Wertgegenstaende wg = new Wertgegenstaende(Integer.parseInt(bensicherheitslevel), Double.parseDouble(gewicht), inhalt, Double.parseDouble(wert));
+        Wertgegenstaende wg = new Wertgegenstaende(Integer.parseInt(sicherheitslevel), Double.parseDouble(gewicht), inhalt, Double.parseDouble(wert));
         getGueterAr().add(wg);
     }
 
@@ -80,25 +80,34 @@ public class GueterController extends ClassController{
     }
 
     public void printAllObjects() {
-        int i=0;
         sendOutput("Alle Güter");
         for (Gueter gut : gueterAr) {
             if (gut instanceof Frischware) {
                 // Umwandeln von gut in Frischware
                 Frischware f = (Frischware) gut;
+                sendOutput("\n Frischwaren: \n");
                 sendOutput(f.getGutnummer()+"\nGewicht: "+ f.getGewicht()+" kg\nInhalt: "+ f.getInhalt()+"\nMindestens haltbar bis: "+ f.getSdf().format(f.getHaltbarkeit()));
                 //DONE: Wie kann ich Objektspezifische Eigenschaften Abrufen?
                 // Durch umwandeln des Datentyps
-            
-            }
-
-            if (gut instanceof Gefahrengut) {
+            } if (gut instanceof Gefahrengut) {
                 //Umwandeln in Gefahrengut
                 Gefahrengut g = (Gefahrengut) gut;
-                sendOutput(g.getGutnummer()+"\n");
-            }
-             else {
-                
+                sendOutput("\n Gefahrengüter: \n");
+                sendOutput(g.getGutnummer()+"\nGewicht: "+g.getGewicht()+"\nInhalt: "+g.getInhalt()+"\nBenötigtes Sicherheitslevel: "+ g.getSicherheitslevel());
+            }if (gut instanceof Normalgut) {
+                Normalgut n = (Normalgut) gut;
+                sendOutput("\n Normalgüter: \n");
+                sendOutput(n.getGutnummer()+"\nGewicht: "+n.getGewicht()+"\nInhalt: "+n.getInhalt());
+            }if (gut instanceof Tiere) {
+                Tiere t = (Tiere) gut;
+                sendOutput("\n Tiere: \n");
+                sendOutput(t.getGutnummer()+"\nGewicht: "+t.getGewicht()+"\nInhalt: "+t.getInhalt()+"\nTierart: "+t.getTierart());
+            }if (gut instanceof Wertgegenstaende) {
+                Wertgegenstaende w = (Wertgegenstaende) gut;
+                sendOutput("\n Wertgegenstände: \n");
+                sendOutput(w.getGutnummer()+"\nGewicht: "+w.getGewicht()+"\nInhalt: "+w.getInhalt()+"\nBenötigtes Sicherheitslevel: "+w.getSicherheitslevel());
+            }else {
+              sendOutput("Das Gut der Nummer "+gut.getGutnummer()+" kann nicht ausgegeben werden");  
             }
         }
         

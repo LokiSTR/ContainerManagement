@@ -1,7 +1,7 @@
 Plan
 
 // Versch. Sorten von Containern
-Gepäck muss einem Schiff zugeordnet sein
+//Gepäck muss einem Schiff zugeordnet sein
     Schiffe erstellen
 (Containersimulation 🙂)
 //Schiffsrouten (Start und Ziel, Zeit, Kilometer) -> neues Model
@@ -10,7 +10,7 @@ Ich möchte einen Container von A nach B schicken inkl. Preis, welches Schiff, w
 Preisberechnung -> Gutart, Gewicht, Route
 
 Feste Routen, Schiffe (können Route wechseln)
-Güter können eingegeben werden.
+//Güter können eingegeben werden.
 Güter können neuer Schiffsroute zugeordnet werden
 
 
