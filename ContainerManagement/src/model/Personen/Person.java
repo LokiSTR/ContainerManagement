@@ -19,8 +19,6 @@ public abstract class Person {
         setNachname(nachname);
     }
 
-    //Zur Ausgabe des Typs
-    public abstract String getPersonenTyp();
 
     // Ausgabe ganzer Name
     public String getName() {

@@ -9,11 +9,11 @@ import model.Gueter.Normalgut;
 import model.Gueter.Tiere;
 import model.Gueter.Wertgegenstaende;
 
-public class GueterTransporter extends ClassController{
+public class GueterController extends ClassController{
 
     ArrayList<Gueter> gueterAr;
 
-    public GueterTransporter(MainController mc) {
+    public GueterController(MainController mc) {
         super(mc);
         setGueterAr(new ArrayList<Gueter>());
     }
@@ -54,6 +54,9 @@ public class GueterTransporter extends ClassController{
         Wertgegenstaende wg = new Wertgegenstaende(Integer.parseInt(gutnummer), Integer.parseInt(bensicherheitslevel), Double.parseDouble(gewicht), inhalt, Double.parseDouble(wert));
         getGueterAr().add(wg);
     }
+
+
+    // quick sort, nach parametern sortieren
 
     public void createDemodata() {
         //TODO: Demodaten schreiben

@@ -13,18 +13,18 @@ public class Verschiffung {
     double preis;
     Schiff schiff;
     Route route;
+    LocalDate start;
     LocalDate ankunft;
     Gueter gut;
     LocalDate jetzt;
 
-    public Verschiffung(Schiff schiff, Route route, Gueter gut, double preis) {
+    public Verschiffung(Schiff schiff, Route route, Gueter gut, double preis, LocalDate start) {
         setGueter(gut);
         setPreis(preis);
         setRoute(route);
         setSchiff(schiff);
-        // Verrechnung der Fahrtzeit mit dem heutigen Datum
-        setJetzt(LocalDate.now());
-        setAnkunft(jetzt.plusDays(getRoute().getZeitDays()));
+        // Verrechnung der Fahrtzeit mit dem Startdatum Datum
+        setAnkunft(getStart().plusDays(getRoute().getZeitDays()));
     }
 
 
@@ -69,5 +69,11 @@ public class Verschiffung {
      }
      public void setJetzt(LocalDate jetzt) {
          this.jetzt = jetzt;
+     }
+     public void setStart(LocalDate start) {
+         this.start = start;
+     }
+     public LocalDate getStart() {
+         return start;
      }
 }
