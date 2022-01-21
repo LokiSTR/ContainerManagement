@@ -37,7 +37,7 @@ public class Frischware extends Gueter {
      public void setSdf(SimpleDateFormat sdf) {
          this.sdf = sdf;
      }
-     public SimpleDateFormat getSdf() {
-         return sdf;
-     }
+    public SimpleDateFormat getSdf() {
+        return sdf;
+    }
 }

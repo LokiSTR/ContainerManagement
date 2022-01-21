@@ -84,9 +84,20 @@ public class GueterController extends ClassController{
         sendOutput("Alle Güter");
         for (Gueter gut : gueterAr) {
             if (gut instanceof Frischware) {
-                sendOutput(gut.getGutnummer()+"\nGewicht: "+ gut.getGewicht()+" kg\nInhalt: "+ gut.getInhalt()+"\nMindestens haltbar bis: "+ gut.getSdf().format());
-                //FIXME: Wie kann ich Objektspezifische Eigenschaften Abrufen?
-            } else {
+                // Umwandeln von gut in Frischware
+                Frischware f = (Frischware) gut;
+                sendOutput(f.getGutnummer()+"\nGewicht: "+ f.getGewicht()+" kg\nInhalt: "+ f.getInhalt()+"\nMindestens haltbar bis: "+ f.getSdf().format(f.getHaltbarkeit()));
+                //DONE: Wie kann ich Objektspezifische Eigenschaften Abrufen?
+                // Durch umwandeln des Datentyps
+            
+            }
+
+            if (gut instanceof Gefahrengut) {
+                //Umwandeln in Gefahrengut
+                Gefahrengut g = (Gefahrengut) gut;
+                sendOutput(g.getGutnummer()+"\n");
+            }
+             else {
                 
             }
         }
