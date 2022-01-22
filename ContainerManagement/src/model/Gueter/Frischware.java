@@ -11,8 +11,8 @@ public class Frischware extends Gueter {
     SimpleDateFormat sdf;
 
 
-    public Frischware(int gutnummer, double gewicht, String inhalt, String haltbarkeit){
-        super(gutnummer, gewicht, haltbarkeit);
+    public Frischware(double gewicht, String inhalt, String haltbarkeit){
+        super(gewicht, inhalt);
         setSdf(new SimpleDateFormat("dd.MM.yyyy"));
         try {
             setHaltbarkeit(sdf.parse(haltbarkeit));
@@ -37,7 +37,7 @@ public class Frischware extends Gueter {
      public void setSdf(SimpleDateFormat sdf) {
          this.sdf = sdf;
      }
-     public SimpleDateFormat getSdf() {
-         return sdf;
-     }
+    public SimpleDateFormat getSdf() {
+        return sdf;
+    }
 }

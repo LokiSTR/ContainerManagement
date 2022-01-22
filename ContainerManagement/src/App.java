@@ -1,5 +1,6 @@
 import java.io.IOException;
 
+import controller.MainController;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -11,36 +12,29 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
  
 public class App extends Application {
-    public void start(Stage primaryStage) throws Exception {
-        
-        Button btn = new Button();
-        btn.setText("Say 'Hello World'");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
- 
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
-            }
-        });
-        
-        StackPane root = new StackPane();
-        root.getChildren().add(btn);
-  
-  /*
-  Parent root = FXMLLoader.load(getClass().getResource("MainScene.fxml"));
-  Scene scene = new Scene(root);
-  */
-  
-    Scene scene = new Scene(root, 300, 250);
-  
-    primaryStage.setTitle("Hello World!");
-        primaryStage.setScene(scene);
-        primaryStage.show();
-    }
+    public void start(Stage primaryStage){
+             
     
 
+        Parent root;
+        try {
+        root = FXMLLoader.load(getClass().getResource("MainScene.fxml"));
+        Scene scene = new Scene(root);
+
+  
+  
+        primaryStage.setTitle("Hello World!");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+        } 
+        catch (IOException e) {
+        
+        }
+    
+
+    }
  
- public static void main(String[] args) {
-        launch(args);
+    public static void main(String[] args) {
+        new MainController();
     }
 }

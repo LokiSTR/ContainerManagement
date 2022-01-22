@@ -4,8 +4,8 @@ public class Gefahrengut extends Gueter{
     
     String inhalt;
     
-    public Gefahrengut(int gutnummer, int bensicherheitslevel, String inhalt) {
-        super(gutnummer, bensicherheitslevel, inhalt);
+    public Gefahrengut(int sicherheitslevel, String inhalt) {
+        super(sicherheitslevel, inhalt);
         setInhalt(inhalt);
     }
 
@@ -14,11 +14,11 @@ public class Gefahrengut extends Gueter{
      * 
      * SETTER UND GETTER
      */
-    public void setBensicherheitslevel(int bensicherheitslevel) {
-        this.bensicherheitslevel = bensicherheitslevel;
+    public void setsicherheitslevel(int sicherheitslevel) {
+        this.sicherheitslevel = sicherheitslevel;
     }
-    public int getBensicherheitslevel() {
-        return bensicherheitslevel;
+    public int getSicherheitslevel() {
+        return sicherheitslevel;
     }
     public void setInhalt(String inhalt) {
         this.inhalt = inhalt;

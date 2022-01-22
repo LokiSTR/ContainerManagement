@@ -4,8 +4,8 @@ public class Tiere extends Gueter{
 
     String tierart;
 
-    public Tiere(int gutnummer, double gewicht, String inhalt, String tierart) {
-        super(gutnummer, gewicht, inhalt);
+    public Tiere( double gewicht, String inhalt, String tierart) {
+        super(gewicht, inhalt);
         setTierart(tierart);
     }
 
