@@ -1,18 +1,19 @@
 package controller;
 
+//import MainSceneController;
 import view.Output;
 
 public class MainController {
     
     Output output;
     GueterController gc;
-    MainSceneController msc;
+//    MainSceneController msc;
     PersonenController pc;
     VerschiffenController vc;
 
     public MainController() {
         setGc(new GueterController(this));
-        setMsc(new MainSceneController(this));
+//        setMsc(new MainSceneController(this));
         setPc(new PersonenController(this));
         setVc(new VerschiffenController(this));
         setOutput(new Output());
@@ -38,12 +39,12 @@ public class MainController {
      public GueterController getGc() {
          return gc;
      }
-     public void setMsc(MainSceneController msc) {
-         this.msc = msc;
-     }
-     public MainSceneController getMsc() {
-         return msc;
-     }
+//     public void setMsc(MainSceneController msc) {
+ //        this.msc = msc;
+  //   }
+    // public MainSceneController getMsc() {
+    //     return msc;
+    // }
      public void setPc(PersonenController pc) {
          this.pc = pc;
      }
