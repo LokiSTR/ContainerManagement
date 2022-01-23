@@ -1,12 +1,12 @@
 package view;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class Output {
 
-    public Scanner scanner;
+  /*  public Scanner scanner;
 
-    public Output(){
+    //public Output(){
         setScanner(new Scanner(System.in));
         startMenu();
     }
@@ -38,7 +38,7 @@ public class Output {
         
     }
     
-    
+    */
 
 
     /**
@@ -59,12 +59,12 @@ public class Output {
      * 
      * SETTER UND GETTER 
      */
-
+/*
     public void setScanner(Scanner scanner) {
         this.scanner = scanner;
     }
     public Scanner getScanner() {
         return scanner;
     }
-
+*/
 }

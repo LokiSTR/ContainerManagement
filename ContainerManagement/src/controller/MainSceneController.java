@@ -1,5 +1,5 @@
+package controller;
 
-import controller.MainController;
 //Für JavaFX benöigt
 import javafx.event.ActionEvent;
 
