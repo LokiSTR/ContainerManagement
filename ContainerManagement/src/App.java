@@ -53,7 +53,7 @@ public class App extends Application {
   
         
 
-        FEHLER MUSS EIGENTLICH BEI ROOT, BZW. DEM FWML-IMPORT LIEGEN. WIESO WEIß ICH NICHT 
+        FEHLER MUSS EIGENTLICH BEI ROOT, BZW. DEM FWML-IMPORT LIEGEN. WIESO WEIß ICH NICHT   
         */
         Parent root;
         root = FXMLLoader.load(getClass().getResource("MainScene.fxml"));
