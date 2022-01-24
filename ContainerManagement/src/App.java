@@ -2,6 +2,11 @@ import java.io.IOException;
 
 import controller.MainController;
 import javafx.application.Application;
+<<<<<<< Updated upstream
+=======
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+>>>>>>> Stashed changes
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -20,7 +25,12 @@ public class App extends Application {
  
     public void start(Stage primaryStage) throws Exception {
 
+<<<<<<< Updated upstream
     /*
+=======
+  Parent root = FXMLLoader.load(getClass().getResource("MainScene.fxml"));
+  //Scene scene = new Scene(root);
+>>>>>>> Stashed changes
 
     TEST----FUNKTIONIERT
 
@@ -51,6 +61,7 @@ public class App extends Application {
         primaryStage.setScene(scene1);
         primaryStage.show();
   
+<<<<<<< Updated upstream
         
 
         FEHLER MUSS EIGENTLICH BEI ROOT, BZW. DEM FWML-IMPORT LIEGEN. WIESO WEIß ICH NICHT 
@@ -67,6 +78,19 @@ public class App extends Application {
         }
     
         
+=======
+  Scene scene = new Scene(root, 300, 250);
+
+  
+    primaryStage.setTitle("Hello World!");
+    primaryStage.setScene(scene);
+    primaryStage.show();
+
+ 
+ public static void main(String[] args) {
+    launch(args);
+    new MainController();
+>>>>>>> Stashed changes
     }
  
     

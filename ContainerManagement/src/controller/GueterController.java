@@ -58,6 +58,26 @@ public class GueterController extends ClassController{
 
 
     // quick sort, nach parametern sortieren
+    /*
+    public class Demo {
+   public static void main(String []args) {
+      String str[] = { "s", "k", "r", "v", "n"};
+      String temp;
+      System.out.println("Sorted string...");
+      for (int j = 0; j < str.length; j++) {
+         for (int i = j + 1; i < str.length; i++) {
+            // comparing strings
+            if (str[i].compareTo(str[j]) < 0) {
+               temp = str[j];
+               str[j] = str[i];
+               str[i] = temp;
+            }
+         }
+         System.out.println(str[j]);
+      }
+   }
+    }
+    */
 
     public void createDemodata() {
 
@@ -76,7 +96,6 @@ public class GueterController extends ClassController{
         getGueterAr().add(new Wertgegenstaende(3, 30, "Geld", 2000));
         getGueterAr().add(new Wertgegenstaende(5, 2, "Edelmetall", 200));
 
-        
     }
 
     public void printAllObjects() {

@@ -19,6 +19,7 @@ public class Frischware extends Gueter {
         } catch (ParseException ex) {
             ex.printStackTrace();
         }
+        setGutTyp("f");
     }
 
     
