@@ -25,7 +25,7 @@ public class VerschiffenController extends ClassController{
 
     @Override
     public void createDemodata() {
-        // TODO Auto-generated method stub
+        getVerschiffungen().add(new Verschiffung(getMc().getSc().getSchiffe().get(1), getMc().getRc().getRouten().get(1), getMc().getGc().getGueterAr().get(1), 2345.3 , LocalDate.parse("10.04.2022")));
         
     }
     

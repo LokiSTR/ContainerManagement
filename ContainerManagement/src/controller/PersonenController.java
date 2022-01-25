@@ -17,6 +17,7 @@ public class PersonenController extends ClassController {
     public PersonenController(MainController mc) {
         super(mc);
         setPersonen(new ArrayList<Person>());
+        setKapitaene(new ArrayList<Kapitaen>());
     }
 
     public void addNewZivilperson(String vorname, String nachname) {
@@ -40,6 +41,24 @@ public class PersonenController extends ClassController {
         getPersonen().add(new ZivilPerson("Holger", "Trampe"));
         
         
+    }
+
+    public void printAllObjects() {
+        sendOutput("Kapitäne: ");
+        for (Kapitaen k : kapitaene) {
+            sendOutput("Name: "+k.getName()+"\nDienstnummer: "+k.getPersonalnummer()+"\n");
+        }
+        for (Person p : personen) {
+            if (p instanceof Crew) {
+                sendOutput("Crew: ");
+                sendOutput("Name: "+p.getName()+"\nDienstnummer: "+p.getPersonalnummer()+"\n");
+            } if (p instanceof ZivilPerson) {
+                sendOutput("Zivilperson:");
+                sendOutput("Name: "+p.getName()+"\n");
+            } else {
+               sendOutput("Fehler!"); 
+            }
+        }
     }
 
     /**

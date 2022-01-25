@@ -15,8 +15,18 @@ public class SchiffController extends ClassController {
 
     @Override
     public void createDemodata() {
-        getSchiffe().add(new Schiff(12000, getMc().getPc().getKapitaene().get(1), null));
+        ArrayList<String> quali1 = new ArrayList<String>();
+        quali1.add("Frischware");
+        quali1.add("Tiere");
+        getSchiffe().add(new Schiff("Frieda",12000, getMc().getPc().getKapitaene().get(1), quali1));
         
+    }
+
+    public void printAllObjects() {
+        sendOutput("Alle Schiffe:");
+        for (Schiff schiff : schiffe) {
+            sendOutput("Name: "+schiff.getName()+"\nKapitän: "+ schiff.getKapitaen().getName()+"\nMaximale Zuladung: "+ schiff.getMaxZuladung()+" Tonnen\nZugelassene Güter: "+ schiff.getGut_zulassungen()+"\n");
+        }
     }
 
     public void createZulassungen() {
@@ -25,7 +35,8 @@ public class SchiffController extends ClassController {
         String g = "gefahrengut";
         String t = "tiere";
         String w = "wertgegenstaende";
-        ArrayList<String> zulassung = new ArrayList<String>();
+        
+        String[] qualifikation = {f,g,t};
     }
 
     /**

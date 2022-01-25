@@ -2,11 +2,8 @@ import java.io.IOException;
 
 import controller.MainController;
 import javafx.application.Application;
-<<<<<<< Updated upstream
-=======
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
->>>>>>> Stashed changes
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -25,12 +22,7 @@ public class App extends Application {
  
     public void start(Stage primaryStage) throws Exception {
 
-<<<<<<< Updated upstream
     /*
-=======
-  Parent root = FXMLLoader.load(getClass().getResource("MainScene.fxml"));
-  //Scene scene = new Scene(root);
->>>>>>> Stashed changes
 
     TEST----FUNKTIONIERT
 
@@ -47,13 +39,12 @@ public class App extends Application {
     
     FXML IMPORT SCHEINT ZUM TEIL NICHT ZU FUNKTIONIEREN, WIESO WEIß ICH NOCH NICHT
     VERMUTUNG: SCENE, BZW STAGE WERDEN NICHT RICHTIG AUFGEBAUT
-    */
-             
+    */      
     
 
         try {
-/*       
-        StackPane layout = new StackPane();
+       
+/*        StackPane layout = new StackPane();
         Scene scene1 = new Scene(layout, 300, 250);
 
         
@@ -61,11 +52,10 @@ public class App extends Application {
         primaryStage.setScene(scene1);
         primaryStage.show();
   
-<<<<<<< Updated upstream
         
 
-        FEHLER MUSS EIGENTLICH BEI ROOT, BZW. DEM FWML-IMPORT LIEGEN. WIESO WEIß ICH NICHT 
-        */
+        //FEHLER MUSS EIGENTLICH BEI ROOT, BZW. DEM FWML-IMPORT LIEGEN. WIESO WEIß ICH NICHT */
+        
         Parent root;
         root = FXMLLoader.load(getClass().getResource("MainScene.fxml"));
         Scene scene = new Scene(root);
@@ -76,22 +66,6 @@ public class App extends Application {
         catch (IOException e) {
         
         }
-    
-        
-=======
-  Scene scene = new Scene(root, 300, 250);
-
-  
-    primaryStage.setTitle("Hello World!");
-    primaryStage.setScene(scene);
-    primaryStage.show();
-
- 
- public static void main(String[] args) {
-    launch(args);
-    new MainController();
->>>>>>> Stashed changes
     }
- 
     
 }

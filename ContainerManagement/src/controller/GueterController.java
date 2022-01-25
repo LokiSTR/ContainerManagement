@@ -99,7 +99,7 @@ public class GueterController extends ClassController{
     }
 
     public void printAllObjects() {
-        sendOutput("Alle Güter");
+        sendOutput("Alle Güter:");
         for (Gueter gut : gueterAr) {
             if (gut instanceof Frischware) {
                 // Umwandeln von gut in Frischware
