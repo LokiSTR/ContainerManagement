@@ -15,6 +15,7 @@ public class SchiffController extends ClassController {
 
     @Override
     public void createDemodata() {
+        //In der ArrayList werden die Zulassungen eingetragen und Übergeben, diese werden dann bei der Verschiffung überprüft.
         ArrayList<String> quali1 = new ArrayList<String>();
         quali1.add("Frischware");
         quali1.add("Tiere");
@@ -34,21 +35,14 @@ public class SchiffController extends ClassController {
     }
 
     public void printAllObjects() {
+        int i=0;
         sendOutput("Alle Schiffe:");
         for (Schiff schiff : schiffe) {
-            sendOutput("Name: "+schiff.getName()+"\nKapitän: "+ schiff.getKapitaen().getName()+"\nMaximale Zuladung: "+ schiff.getMaxZuladung()+" Tonnen\nZugelassene Güter: "+ schiff.getGut_zulassungen()+"\n");
+            sendOutput(i+ ". Name: "+schiff.getName()+"\nKapitän: "+ schiff.getKapitaen().getName()+"\nMaximale Zuladung: "+ schiff.getMaxZuladung()+" Tonnen\nZugelassene Güter: "+ schiff.getGut_zulassungen()+"\n");
+            i++;
         }
     }
 
-    /*public void createZulassungen() {
-        //Alle Schiffe können Normalgut Transportieren!
-        String f = "frischware";
-        String g = "gefahrengut";
-        String t = "tiere";
-        String w = "wertgegenstaende";
-        
-        String[] qualifikation = {f,g,t,w};
-    }*/
 
     /**
      * 

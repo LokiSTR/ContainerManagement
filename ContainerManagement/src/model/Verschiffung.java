@@ -10,13 +10,12 @@ import model.Transport.Schiff;
 public class Verschiffung {
     //Ich möchte einen Container von A nach B schicken inkl. Preis, welches Schiff, welche Route, wann ist der Container da, wie schwer ist er usw
 
+    //Datum mit LocalDate, weil dies im Constructor verrechnet werden kann.
     double preis;
     Schiff schiff;
     Route route;
-    //LocalDate start;
     LocalDate ankunft;
     Gueter gut;
-    //SimpleDateFormat sdf;
     LocalDate jetzt;
 
     
@@ -25,9 +24,7 @@ public class Verschiffung {
         setPreis(preis);
         setRoute(route);
         setSchiff(schiff);
-        //setSdf(new SimpleDateFormat("dd.MM.yyyy"));
-        //setStart(LocalDate.parse(start));
-        // Verrechnung der Fahrtzeit mit dem Startdatum Datum
+        //Verrechnung der Fahrtzeit mit dem Startdatum
         //Startzeit wird nicht mehr angegeben, weil das Konvertieren von LocalDate in Date nicht klappt. Die Schiffe fahren jetzt immer sofort los.
         setJetzt(LocalDate.now());
         setAnkunft(getJetzt().plusDays(getRoute().getZeitDays()));
@@ -70,18 +67,6 @@ public class Verschiffung {
      public Gueter getGut() {
          return gut;
      }
-     /*public void setStart(LocalDate start) {
-         this.start = start;
-     }
-     public LocalDate getStart() {
-         return start;
-     }
-     public void setSdf(SimpleDateFormat sdf) {
-        this.sdf = sdf;
-     }
-     public SimpleDateFormat getSdf() {
-       return sdf;
-     }*/
      public void setJetzt(LocalDate jetzt) {
          this.jetzt = jetzt;
      }

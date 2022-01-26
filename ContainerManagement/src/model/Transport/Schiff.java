@@ -10,8 +10,7 @@ public class Schiff {
     int maxZuladung;
     Kapitaen kapitaen;
     String name;
-    //Arraylist mit Angaben darüber, welche Güter mit diesem Schiff transportiert werden können
-    //TODO
+    //Arraylist mit Angaben darüber, welche Güter mit diesem Schiff transportiert werden können, muss vor erzeugen einer Instanz erstellt werden.
     ArrayList<String> gut_zulassungen;
 
     public Schiff(String name, int maxZuladung, Kapitaen kapitaen, ArrayList<String> gut_zulassungen) {

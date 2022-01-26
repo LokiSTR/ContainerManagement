@@ -1,5 +1,6 @@
 package controller;
 
+//Abstrakte Klasse aus der die ModelController erben
 public abstract class ClassController {
     
     MainController mc;
@@ -12,8 +13,8 @@ public abstract class ClassController {
     //Methode in der die Demodaten generiert werden:
     public abstract void createDemodata();
 
-    // Methode, die alle vorhandenen Elemente der ArrayList ausgibt
-    //public abstract void printAllObjects();
+    //Methode, die alle vorhandenen Elemente der ArrayList ausgibt
+    public abstract void printAllObjects();
 
     // Methode, die ein bestimmtes Objeht der ArrayList ausgibt, in den Parametern wird der Index dieses Elements übergeben
     //public abstract void printSpecificObject(int index);

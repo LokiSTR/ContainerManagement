@@ -25,9 +25,11 @@ public class RouteController extends ClassController{
     }
 
     public void printAllObjects() {
+        int i=0;
         sendOutput("Alle Routen:");
         for (Route r : routen) {
-            sendOutput("Start: "+r.getStart()+"\nZiel: "+ r.getZiel()+"\nFahrtszeit: "+ r.getZeitDays()+" Tage\nStrecke: "+ r.getKilometer()+" km\n");
+            sendOutput(i+". Start: "+r.getStart()+"\nZiel: "+ r.getZiel()+"\nFahrtszeit: "+ r.getZeitDays()+" Tage\nStrecke: "+ r.getKilometer()+" km\n");
+            i++;
         }    
     }
 

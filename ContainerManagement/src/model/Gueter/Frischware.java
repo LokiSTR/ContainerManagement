@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class Frischware extends Gueter {
 
-    //Vielleicht eine andere Zeiteinheit?
+    //Angabe des Datums mit util.Date weil die Eingabe einfacher ist.
     Date haltbarkeit;
     SimpleDateFormat sdf;
 
@@ -19,7 +19,7 @@ public class Frischware extends Gueter {
         } catch (ParseException ex) {
             ex.printStackTrace();
         }
-        setGutTyp("f");
+        setGutTyp("Frischware");
     }
 
     

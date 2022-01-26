@@ -2,6 +2,10 @@ package controller;
 
 import java.util.Scanner;
 
+import model.Gueter.Gueter;
+import model.Transport.Route;
+import model.Transport.Schiff;
+
 public class MenuController {
 
     MainController mc;
@@ -17,7 +21,7 @@ public class MenuController {
         sendOutput("(2) Neue Verschiffung");
         sendOutput("(3) Etwas ausgeben");
     
-        String auswahl = "1"; //getMc().getOutput()
+        String auswahl = "2"; //getMc().getOutput()
 
         sendOutput("Ihre Auswahl ist: " + auswahl);
 
@@ -26,16 +30,17 @@ public class MenuController {
             createGutMenu();
         }   
         else if(auswahl.equals("2")){
-            sendOutput("Noch nicht implementiert!");
+            createVerschiffung();
         }
         else if(auswahl.equals("3")){
-            sendOutput("Noch nicht implementiert!");
+            showMenu();
         }
         else{
             sendOutput("Falsche Eingabe");
         }
     }
 
+    //Für neue eingaben von Gütern
     public void createGutMenu() {
         sendOutput("Sie wollen ein neues Gut erstellen, bitte Wählen sie den Typ");
         sendOutput("(1) Frischware");
@@ -69,20 +74,71 @@ public class MenuController {
        }
     }
 
+    //Eine neue Verschiffung erstellen
+    public void createVerschiffung() {
+
+        sendOutput("Preis: ");
+        String preis = "2000";
+
+        sendOutput("Bitte bei den Folgenden abfragen jeweils die vorangestellte Nummer des gewünschten Objekts angeben.\n");
+        //Schiff auswählen
+        sendOutput("Schiff wählen: \n");
+        getMc().getSc().printAllObjects();
+        String schiff_choice = "1";
+        //Schiff raussuchen
+        Schiff schiff = getMc().getSc().getSchiffe().get(Integer.valueOf(schiff_choice));
+
+        //Route auswählen
+        sendOutput("Route wählen: ");
+        getMc().getRc().printAllObjects();
+        String route_choice = "3";
+        Route route = getMc().getRc().getRouten().get(Integer.valueOf(route_choice));
+
+        //Gut auswählen
+        //Wenn möglich nach erstellen von neuem Gut dieses direkt in die Verschiffung übergeben...
+        sendOutput("Gut wählen: ");
+        getMc().getGc().printAllObjects();
+        String gut_choice = "3";
+        //Schiff raussuchen
+        Gueter gut = getMc().getGc().getGueterAr().get(Integer.valueOf(gut_choice)-1);
+
+        getMc().getVc().addNewVerschiffung(schiff, route, gut, preis);
+        
+    }
+
+    //Dinge ausgeben lassen
     public void showMenu() {
+
+        sendOutput("Sie wollen etwas ausgeben lassen, bitte wählen sie genauer");
+        sendOutput("(1) alles");
+        sendOutput("(2) Güter");
+        sendOutput("(3) Personen");
+        sendOutput("(4) Routen");
+        sendOutput("(5) Schiffe");
+        sendOutput("(6) Verschiffungen");
+
         String auswahl = "1"; //getMc().getOutput()
 
         sendOutput("Ihre Auswahl ist: " + auswahl);
 
 
         if(auswahl.equals("1")){
-            createGutMenu();
+            getMc().printEveryObject();
         }   
         else if(auswahl.equals("2")){
-            sendOutput("Noch nicht implementiert!");
+            getMc().getGc().printAllObjects();
         }
         else if(auswahl.equals("3")){
-            sendOutput("Noch nicht implementiert!");
+            getMc().getPc().printAllObjects();
+        }
+        else if(auswahl.equals("4")){
+            getMc().getRc().printAllObjects();
+        }
+        else if(auswahl.equals("5")){
+            getMc().getSc().printAllObjects();
+        }
+        else if(auswahl.equals("6")){
+            getMc().getVc().printAllObjects();
         }
         else{
             sendOutput("Falsche Eingabe");
@@ -155,7 +211,6 @@ public class MenuController {
     public void sendOutput(String data) {
         getMc().getOutput().printData(data);
     }
-
 
     /**
      * 
