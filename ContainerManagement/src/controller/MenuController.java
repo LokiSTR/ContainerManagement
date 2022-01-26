@@ -174,6 +174,9 @@ public class MenuController {
         setScanner(new Scanner(System.in));
     }
 
+
+    /*
+    
     public void startMenu(){
         System.out.println("Eingaben überprüfen");
     
@@ -200,6 +203,8 @@ public class MenuController {
     
         
     }
+
+    */
     
     
 

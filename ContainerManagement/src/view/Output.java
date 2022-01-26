@@ -7,11 +7,15 @@ import controller.MenuController;
 public class Output {
 
     public Scanner scanner;
+    
 
     public Output(){
 
     }
 
+    public void printData(String data){
+        System.out.println(data);
+    }
     
 
 

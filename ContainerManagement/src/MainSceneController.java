@@ -1,5 +1,4 @@
-
-import controller.MainController;
+// import controller.MainController;
 //Für JavaFX benöigt
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -7,11 +6,11 @@ import javafx.fxml.FXML;
 
 public class MainSceneController{
 
-    MainController mc;
+  //  MainController mc;
 
-    //public MainSceneController(MainController mc) {
-    //    setMc(mc);
-    //}
+    // public MainSceneController(MainController mc) {
+        // setMc(mc);
+    // }
 
     @FXML
     void newGut(ActionEvent event) {
@@ -33,11 +32,11 @@ public class MainSceneController{
      * 
      * SETTER UND GETTER
      */
-
+/*
      public void setMc(MainController mc) {
          this.mc = mc;
      }
      public MainController getMc() {
          return mc;
-     }
+     }*/
 }
