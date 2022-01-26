@@ -8,15 +8,16 @@ public class Output {
 
     public Scanner scanner;
     MainController mc;
+    
 
     public Output(MainController mc){
         setMc(mc);
     }
 
-    
-    public void printData(String data) {
+    public void printData(String data){
         System.out.println(data);
     }
+    
 
     /**
      * 
