@@ -1,73 +1,43 @@
 import java.io.IOException;
 
-import controller.MainController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
  
+import controller.MainController;
+
 public class App extends Application {
     
-    Button button;
-
-    public static void main(String[] args) {
-        new MainController();
+    public static Stage primaryStage;
+    public static AnchorPane rootLayout;
+    
+    public static void main(String[] args) throws IOException {
         launch(args);
+        new MainController();
     }
  
     public void start(Stage primaryStage) throws Exception {
 
-    /*
+        // Load root layout from fxml file.
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(App.class.getResource("view/MainScene.fxml"));
+        rootLayout = (AnchorPane) loader.load();
+     
+        //Zum Ausgeben der Location der FXML Datei
+        System.out.println(loader.getLocation());
 
-    TEST----FUNKTIONIERT
 
-    primaryStage.setTitle("Hello World!");
-    button = new Button();
-    button.setText("Hoffentlich klappts");
-
-    StackPane layout = new StackPane();
-    layout.getChildren().add(button);
-    
-    Scene scene = new Scene(layout, 300, 250);
-    primaryStage.setScene(scene);
-    primaryStage.show();
-    
-    FXML IMPORT SCHEINT ZUM TEIL NICHT ZU FUNKTIONIEREN, WIESO WEIß ICH NOCH NICHT
-    VERMUTUNG: SCENE, BZW STAGE WERDEN NICHT RICHTIG AUFGEBAUT
-    */
-             
-    
-
-        try {
-/*       
-        StackPane layout = new StackPane();
-        Scene scene1 = new Scene(layout, 300, 250);
-
-        
+        // Show the scene containing the root layout.
         primaryStage.setTitle("Hello World!");
-        primaryStage.setScene(scene1);
-        primaryStage.show();
-  
-        
-
-        FEHLER MUSS EIGENTLICH BEI ROOT, BZW. DEM FWML-IMPORT LIEGEN. WIESO WEIß ICH NICHT   
-        */
-        Parent root;
-        root = FXMLLoader.load(getClass().getResource("MainScene.fxml"));
-        Scene scene = new Scene(root);
-        primaryStage.setTitle("Hello World!");
-        primaryStage.setScene(scene);
-        primaryStage.show();
-        } 
-        catch (IOException e) {
-        
-        }
-    
-        
+        primaryStage.setScene(new Scene(rootLayout));
+        primaryStage.show();            
+         
     }
- 
-    
+       
+    //Getter     
+    public Stage getPrimaryStage() {
+        return primaryStage;
+    }
 }
