@@ -26,31 +26,31 @@ public class GueterController extends ClassController{
      * Hinzufügen neuer Güter
      * 
      */
-    public void addNewFrischware(String gutnummer , String gewicht, String inhalt, String haltbarkeit){
+    public void addNewFrischware(String gewicht, String inhalt, String haltbarkeit){
         //Neue Frischware hinzufügen und gueterAr hinzufügen
         Frischware fw = new Frischware( Double.parseDouble(gewicht), inhalt, haltbarkeit);
         getGueterAr().add(fw);
     }
 
-    public void addNewGefahrengut(String gutnummer, String sicherheitslevel, String inhalt) {
+    public void addNewGefahrengut(String sicherheitslevel, String inhalt) {
         //Neues Gefahrengut hinzufügen und gueterAr hinzufügen
         Gefahrengut gg = new Gefahrengut( Integer.parseInt(sicherheitslevel), inhalt);
         getGueterAr().add(gg);
     }
 
-    public void addNewNormalgut(String gutnummer, String gewicht, String inhalt) {
+    public void addNewNormalgut(String gewicht, String inhalt) {
         //Neues Gefahrengut hinzufügen und gueterAr hinzufügen
         Normalgut ng = new Normalgut( Integer.parseInt(gewicht), inhalt);
         getGueterAr().add(ng);
     }
 
-    public void addNewTiere(String gutnummer, String gewicht, String inhalt, String tierart){
+    public void addNewTiere(String gewicht, String inhalt, String tierart){
         //Neue Tiere hinzufügen
         Tiere t = new Tiere( Double.parseDouble(gewicht), inhalt, tierart);
         getGueterAr().add(t);
     }
 
-    public void addNewWertgegenstaende(String gutnummer, String sicherheitslevel, String gewicht, String inhalt, String wert) {
+    public void addNewWertgegenstaende(String sicherheitslevel, String gewicht, String inhalt, String wert) {
         //Neue Wertgegenstände
         Wertgegenstaende wg = new Wertgegenstaende(Integer.parseInt(sicherheitslevel), Double.parseDouble(gewicht), inhalt, Double.parseDouble(wert));
         getGueterAr().add(wg);
@@ -58,6 +58,26 @@ public class GueterController extends ClassController{
 
 
     // quick sort, nach parametern sortieren
+    /*
+    public class Demo {
+   public static void main(String []args) {
+      String str[] = { "s", "k", "r", "v", "n"};
+      String temp;
+      System.out.println("Sorted string...");
+      for (int j = 0; j < str.length; j++) {
+         for (int i = j + 1; i < str.length; i++) {
+            // comparing strings
+            if (str[i].compareTo(str[j]) < 0) {
+               temp = str[j];
+               str[j] = str[i];
+               str[i] = temp;
+            }
+         }
+         System.out.println(str[j]);
+      }
+   }
+    }
+    */
 
     public void createDemodata() {
 
@@ -76,11 +96,10 @@ public class GueterController extends ClassController{
         getGueterAr().add(new Wertgegenstaende(3, 30, "Geld", 2000));
         getGueterAr().add(new Wertgegenstaende(5, 2, "Edelmetall", 200));
 
-        
     }
 
     public void printAllObjects() {
-        sendOutput("Alle Güter");
+        sendOutput("Alle Güter:");
         for (Gueter gut : gueterAr) {
             if (gut instanceof Frischware) {
                 // Umwandeln von gut in Frischware

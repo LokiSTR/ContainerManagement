@@ -13,4 +13,19 @@ public class Output {
     }
 
     
+
+
+    /**
+     * 
+     * 
+     * SETTER UND GETTER 
+     */
+
+    public void setScanner(Scanner scanner) {
+        this.scanner = scanner;
+    }
+    public Scanner getScanner() {
+        return scanner;
+    }
+
 }

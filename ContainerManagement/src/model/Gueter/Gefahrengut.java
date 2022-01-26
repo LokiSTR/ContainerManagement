@@ -7,6 +7,7 @@ public class Gefahrengut extends Gueter{
     public Gefahrengut(int sicherheitslevel, String inhalt) {
         super(sicherheitslevel, inhalt);
         setInhalt(inhalt);
+        setGutTyp("g");
     }
 
 

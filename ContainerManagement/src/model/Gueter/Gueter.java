@@ -6,6 +6,7 @@ public abstract class Gueter {
     int sicherheitslevel;
     double gewicht;
     String inhalt;
+    String gutTyp;
     static int anzahlGueter;
 
     public Gueter(double gewicht, String inhalt){
@@ -62,5 +63,11 @@ public abstract class Gueter {
     }
     public static int getAnzahlGueter() {
         return anzahlGueter;
+    }
+    public void setGutTyp(String gutTyp) {
+        this.gutTyp = gutTyp;
+    }
+    public String getGutTyp() {
+        return gutTyp;
     }
 }

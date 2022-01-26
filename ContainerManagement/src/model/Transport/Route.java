@@ -5,7 +5,7 @@ public class Route {
     
     String start;
     String ziel;
-    int zeitDays; //TODO: nach Möglichkeit in date umwandeln
+    int zeitDays;
     int kilometer;
 
     public Route(String start, String ziel, int zeitDays, int kilometer) {
