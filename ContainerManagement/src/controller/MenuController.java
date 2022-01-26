@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class MenuController {
 
     MainController mc;
+    public Scanner scanner;
 
     public MenuController(MainController mc) {
         setMc(mc);
@@ -155,67 +156,6 @@ public class MenuController {
         getMc().getOutput().printData(data);
     }
 
-    /**
-     * 
-     * SETTER UND GETTER
-     */
-
-     public void setMc(MainController mc) {
-         this.mc = mc;
-     }
-     public MainController getMc() {
-         return mc;
-     }
-    
-    public Scanner scanner;
-
-
-    public MenuController(){
-        setScanner(new Scanner(System.in));
-    }
-
-    public void startMenu(){
-        System.out.println("Eingaben überprüfen");
-    
-        String auswahl = getScanner().nextLine();
-
-        System.out.println("Deine Wahl ist: " + auswahl);
-
-
-        if(auswahl.equals("1")){
-
-        }   
-        else if(auswahl.equals("2")){
-
-        }
-        else if(auswahl.equals("3")){
-
-        }
-        else if(auswahl.equals("4")){
-
-        }
-        else{
-            System.out.println("Falsche Eingabe");
-        }
-    
-        
-    }
-    
-    
-
-
-    /**
-     * 
-     * 
-     * 
-     * NORMALE AUSGABE 
-     */
-
-    public void printData(String data){
-        System.out.println(data);
-         
-    }
-
 
     /**
      * 
@@ -228,6 +168,12 @@ public class MenuController {
     }
     public Scanner getScanner() {
         return scanner;
+    }
+    public void setMc(MainController mc) {
+        this.mc = mc;
+    }
+    public MainController getMc() {
+        return mc;
     }
 
 

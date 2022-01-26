@@ -1,5 +1,7 @@
 package controller;
 
+import java.time.LocalDate;
+
 //import MainSceneController;
 import view.Output;
 
@@ -25,11 +27,11 @@ public class MainController {
         setVc(new VerschiffenController(this));
         setSc(new SchiffController(this));
         setRc(new RouteController(this));
-        setOutput(new Output());
+        setOutput(new Output(this));
 
-        /*createAllDemodata();
-
-        getPc().printAllObjects();
+        createAllDemodata();
+        getOutput().printData(getVc().getVerschiffungen().get(0).getAnkunft().toString());
+        /*getPc().printAllObjects();
         getRc().printAllObjects();
         getSc().printAllObjects();*/
         getMenuc().startMenu();
@@ -40,7 +42,7 @@ public class MainController {
         getPc().createDemodata();
         getRc().createDemodata();
         getSc().createDemodata();
-        //getVc().createDemodata();
+        getVc().createDemodata();
     }
 
     /**

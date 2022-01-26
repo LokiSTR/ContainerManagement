@@ -15,7 +15,7 @@ public class Frischware extends Gueter {
         super(gewicht, inhalt);
         setSdf(new SimpleDateFormat("dd.MM.yyyy"));
         try {
-            setHaltbarkeit(sdf.parse(haltbarkeit));
+            setHaltbarkeit(getSdf().parse(haltbarkeit));
         } catch (ParseException ex) {
             ex.printStackTrace();
         }

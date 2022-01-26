@@ -13,19 +13,24 @@ public class Verschiffung {
     double preis;
     Schiff schiff;
     Route route;
-    LocalDate start;
+    //LocalDate start;
     LocalDate ankunft;
     Gueter gut;
+    //SimpleDateFormat sdf;
     LocalDate jetzt;
 
-    public Verschiffung(Schiff schiff, Route route, Gueter gut, double preis, LocalDate start) {
-        setGueter(gut);
+    
+    public Verschiffung(Schiff schiff, Route route, Gueter gut, double preis) {
+        setGut(gut);
         setPreis(preis);
         setRoute(route);
         setSchiff(schiff);
-        setStart(start);
+        //setSdf(new SimpleDateFormat("dd.MM.yyyy"));
+        //setStart(LocalDate.parse(start));
         // Verrechnung der Fahrtzeit mit dem Startdatum Datum
-        setAnkunft(getStart().plusDays(getRoute().getZeitDays()));
+        //Startzeit wird nicht mehr angegeben, weil das Konvertieren von LocalDate in Date nicht klappt. Die Schiffe fahren jetzt immer sofort los.
+        setJetzt(LocalDate.now());
+        setAnkunft(getJetzt().plusDays(getRoute().getZeitDays()));
     }
 
 
@@ -59,22 +64,28 @@ public class Verschiffung {
      public Schiff getSchiff() {
          return schiff;
      }
-     public void setGueter(Gueter gut) {
+     public void setGut(Gueter gut) {
          this.gut = gut;
      }
-     public Gueter getGueter() {
+     public Gueter getGut() {
          return gut;
      }
-     public LocalDate getJetzt() {
-         return jetzt;
-     }
-     public void setJetzt(LocalDate jetzt) {
-         this.jetzt = jetzt;
-     }
-     public void setStart(LocalDate start) {
+     /*public void setStart(LocalDate start) {
          this.start = start;
      }
      public LocalDate getStart() {
          return start;
+     }
+     public void setSdf(SimpleDateFormat sdf) {
+        this.sdf = sdf;
+     }
+     public SimpleDateFormat getSdf() {
+       return sdf;
+     }*/
+     public void setJetzt(LocalDate jetzt) {
+         this.jetzt = jetzt;
+     }
+     public LocalDate getJetzt() {
+         return jetzt;
      }
 }
