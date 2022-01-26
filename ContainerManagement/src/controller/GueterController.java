@@ -26,31 +26,31 @@ public class GueterController extends ClassController{
      * Hinzufügen neuer Güter
      * 
      */
-    public void addNewFrischware(String gutnummer , String gewicht, String inhalt, String haltbarkeit){
+    public void addNewFrischware(String gewicht, String inhalt, String haltbarkeit){
         //Neue Frischware hinzufügen und gueterAr hinzufügen
         Frischware fw = new Frischware( Double.parseDouble(gewicht), inhalt, haltbarkeit);
         getGueterAr().add(fw);
     }
 
-    public void addNewGefahrengut(String gutnummer, String sicherheitslevel, String inhalt) {
+    public void addNewGefahrengut(String sicherheitslevel, String inhalt) {
         //Neues Gefahrengut hinzufügen und gueterAr hinzufügen
         Gefahrengut gg = new Gefahrengut( Integer.parseInt(sicherheitslevel), inhalt);
         getGueterAr().add(gg);
     }
 
-    public void addNewNormalgut(String gutnummer, String gewicht, String inhalt) {
+    public void addNewNormalgut(String gewicht, String inhalt) {
         //Neues Gefahrengut hinzufügen und gueterAr hinzufügen
         Normalgut ng = new Normalgut( Integer.parseInt(gewicht), inhalt);
         getGueterAr().add(ng);
     }
 
-    public void addNewTiere(String gutnummer, String gewicht, String inhalt, String tierart){
+    public void addNewTiere(String gewicht, String inhalt, String tierart){
         //Neue Tiere hinzufügen
         Tiere t = new Tiere( Double.parseDouble(gewicht), inhalt, tierart);
         getGueterAr().add(t);
     }
 
-    public void addNewWertgegenstaende(String gutnummer, String sicherheitslevel, String gewicht, String inhalt, String wert) {
+    public void addNewWertgegenstaende(String sicherheitslevel, String gewicht, String inhalt, String wert) {
         //Neue Wertgegenstände
         Wertgegenstaende wg = new Wertgegenstaende(Integer.parseInt(sicherheitslevel), Double.parseDouble(gewicht), inhalt, Double.parseDouble(wert));
         getGueterAr().add(wg);

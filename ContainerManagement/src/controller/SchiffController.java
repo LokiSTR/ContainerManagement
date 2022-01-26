@@ -36,7 +36,7 @@ public class SchiffController extends ClassController {
         String t = "tiere";
         String w = "wertgegenstaende";
         
-        String[] qualifikation = {f,g,t};
+        String[] qualifikation = {f,g,t,w};
     }
 
     /**

@@ -7,27 +7,32 @@ public class MainController {
     
     Output output;
     GueterController gc;
-//    MainSceneController msc;
+    //MainSceneController msc;
+    MenuController menuc;
     PersonenController pc;
-    VerschiffenController vc;
     RouteController rc;
     SchiffController sc;
+    VerschiffenController vc;
+    
+
 
 
     public MainController() {
         setGc(new GueterController(this));
 //        setMsc(new MainSceneController(this));
         setPc(new PersonenController(this));
+        setMenuc(new MenuController(this));
         setVc(new VerschiffenController(this));
         setSc(new SchiffController(this));
         setRc(new RouteController(this));
         setOutput(new Output());
 
-        createAllDemodata();
+        /*createAllDemodata();
 
         getPc().printAllObjects();
         getRc().printAllObjects();
-        getSc().printAllObjects();
+        getSc().printAllObjects();*/
+        getMenuc().startMenu();
     }
 
     public void createAllDemodata() {
@@ -54,6 +59,12 @@ public class MainController {
      }
      public GueterController getGc() {
          return gc;
+     }
+     public void setMenuc(MenuController menuc) {
+         this.menuc = menuc;
+     }
+     public MenuController getMenuc() {
+         return menuc;
      }
 //     public void setMsc(MainSceneController msc) {
  //        this.msc = msc;
