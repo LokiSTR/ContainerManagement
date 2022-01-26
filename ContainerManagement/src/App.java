@@ -14,7 +14,7 @@ public class App extends Application {
     public static AnchorPane rootLayout;
     
     public static void main(String[] args) throws IOException {
-        //launch(args);
+        launch(args);
         new MainController();
     }
  
