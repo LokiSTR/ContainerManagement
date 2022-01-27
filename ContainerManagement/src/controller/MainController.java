@@ -25,22 +25,33 @@ public class MainController {
         setVc(new VerschiffenController(this));
         setSc(new SchiffController(this));
         setRc(new RouteController(this));
-        setOutput(new Output());
+        setOutput(new Output(this));
 
-        /*createAllDemodata();
-
-        getPc().printAllObjects();
+        createAllDemodata();
+        //printEveryObject();
+        /*getPc().printAllObjects();
         getRc().printAllObjects();
         getSc().printAllObjects();*/
         getMenuc().startMenu();
+
     }
 
+    //Erstellen aller Demodaten aus allen Controllern
     public void createAllDemodata() {
         getGc().createDemodata();
         getPc().createDemodata();
         getRc().createDemodata();
         getSc().createDemodata();
-        //getVc().createDemodata();
+        getVc().createDemodata();
+    }
+
+    //Methode zum ausgeben aller Objekte
+    public void printEveryObject() {
+        getGc().printAllObjects();
+        getPc().printAllObjects();
+        getRc().printAllObjects();
+        getSc().printAllObjects();
+        getVc().printAllObjects();
     }
 
     /**
@@ -66,12 +77,12 @@ public class MainController {
      public MenuController getMenuc() {
          return menuc;
      }
-//     public void setMsc(MainSceneController msc) {
- //        this.msc = msc;
-  //   }
-    // public MainSceneController getMsc() {
-    //     return msc;
-    // }
+     /*public void setMsc(MainSceneController msc) {
+         this.msc = msc;
+     }
+     public MainSceneController getMsc() {
+         return msc;
+     }*/
      public void setPc(PersonenController pc) {
          this.pc = pc;
      }

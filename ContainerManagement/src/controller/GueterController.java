@@ -58,28 +58,6 @@ public class GueterController extends ClassController{
     }
 
 
-    // quick sort, nach parametern sortieren
-    /*
-    public class Demo {
-   public static void main(String []args) {
-      String str[] = { "s", "k", "r", "v", "n"};
-      String temp;
-      System.out.println("Sorted string...");
-      for (int j = 0; j < str.length; j++) {
-         for (int i = j + 1; i < str.length; i++) {
-            // comparing strings
-            if (str[i].compareTo(str[j]) < 0) {
-               temp = str[j];
-               str[j] = str[i];
-               str[i] = temp;
-            }
-         }
-         System.out.println(str[j]);
-      }
-   }
-    }
-    */
-
     public void createDemodata() {
 
         getGueterAr().add(new Frischware(230, "Bananen", "22.03.2022"));
@@ -92,13 +70,15 @@ public class GueterController extends ClassController{
         getGueterAr().add(new Normalgut(100, "Bücher"));
 
         getGueterAr().add(new Tiere(500, "Uwe", "Bulle"));
-        getGueterAr().add(new Tiere(20, "20 Tiere", "Enten"));
+        getGueterAr().add(new Tiere(20, "20", "Enten"));
 
         getGueterAr().add(new Wertgegenstaende(3, 30, "Geld", 2000));
         getGueterAr().add(new Wertgegenstaende(5, 2, "Edelmetall", 200));
 
     }
 
+
+    //Ausgabemethode bei jedem Objekt wird überprüft zu welcher Unterklasse es gehört und demnach werden sie ausgegeben.
     public void printAllObjects() {
         sendOutput("Alle Güter:");
         for (Gueter gut : gueterAr) {
@@ -109,23 +89,27 @@ public class GueterController extends ClassController{
                 sendOutput(f.getGutnummer()+"\nGewicht: "+ f.getGewicht()+" kg\nInhalt: "+ f.getInhalt()+"\nMindestens haltbar bis: "+ f.getSdf().format(f.getHaltbarkeit()));
                 //DONE: Wie kann ich Objektspezifische Eigenschaften Abrufen?
                 // Durch umwandeln des Datentyps
-            }else if (gut instanceof Gefahrengut) {
+            }
+            else if (gut instanceof Gefahrengut) {
                 //Umwandeln in Gefahrengut
                 Gefahrengut g = (Gefahrengut) gut;
                 sendOutput("\n Gefahrengut:");
-                sendOutput(g.getGutnummer()+"\nGewicht: "+g.getGewicht()+"\nInhalt: "+g.getInhalt()+"\nBenötigtes Sicherheitslevel: "+ g.getSicherheitslevel());
-            }else if (gut instanceof Normalgut) {
+                sendOutput(g.getGutnummer()+"\nInhalt: "+g.getInhalt()+"\nBenötigtes Sicherheitslevel: "+ g.getSicherheitslevel());
+            }
+            else if (gut instanceof Normalgut) {
                 Normalgut n = (Normalgut) gut;
                 sendOutput("\n Normalgut:");
                 sendOutput(n.getGutnummer()+"\nGewicht: "+n.getGewicht()+"\nInhalt: "+n.getInhalt());
-            }else if (gut instanceof Tiere) {
+            }
+            else if (gut instanceof Tiere) {
                 Tiere t = (Tiere) gut;
                 sendOutput("\n Tier:");
                 sendOutput(t.getGutnummer()+"\nGewicht: "+t.getGewicht()+"\nInhalt: "+t.getInhalt()+"\nTierart: "+t.getTierart());
-            }else if (gut instanceof Wertgegenstaende) {
+            }
+            else if (gut instanceof Wertgegenstaende) {
                 Wertgegenstaende w = (Wertgegenstaende) gut;
                 sendOutput("\n Wertgegenstand:");
-                sendOutput(w.getGutnummer()+"\nGewicht: "+w.getGewicht()+"\nInhalt: "+w.getInhalt()+"\nBenötigtes Sicherheitslevel: "+w.getSicherheitslevel());
+                sendOutput(w.getGutnummer()+"\nGewicht: "+w.getGewicht()+"\nInhalt: "+w.getInhalt()+"\nBenötigtes Sicherheitslevel: "+w.getSicherheitslevel()+"\nWert: "+w.getWert());
             }else {
               sendOutput("Das Gut der Nummer "+gut.getGutnummer()+" kann nicht ausgegeben werden");  
             }

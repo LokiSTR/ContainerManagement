@@ -7,7 +7,7 @@ public class Tiere extends Gueter{
     public Tiere( double gewicht, String inhalt, String tierart) {
         super(gewicht, inhalt);
         setTierart(tierart);
-        setGutTyp("t");
+        setGutTyp("Tiere");
     }
 
 

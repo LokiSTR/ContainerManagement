@@ -35,6 +35,7 @@ public class PersonenController extends ClassController {
     public void createDemodata() {
         getKapitaene().add(new Kapitaen("Axel", "Springer", 27389));
         getKapitaene().add(new Kapitaen("Tom", "Hindenburg", 27240));
+        getKapitaene().add(new Kapitaen("Sonja", "Meyer", 27429));
 
         getPersonen().add(new Crew("Sybille", "Springer", 27389));
 

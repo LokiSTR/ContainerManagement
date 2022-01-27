@@ -1,24 +1,10 @@
-Plan
+Erläuterungen: 
 
-// Versch. Sorten von Containern
-//Gepäck muss einem Schiff zugeordnet sein
-    Schiffe erstellen
-(Containersimulation 🙂)
-//Schiffsrouten (Start und Ziel, Zeit, Kilometer) -> neues Model
-!  Ich möchte einen Container von A nach B schicken inkl. Preis, welches Schiff, welche Route, wann ist der Container da, wie schwer ist er usw
+Arbeitsteilung:
 
-! Swichcase: https://studyflix.de/informatik/switch-case-java-1804
+Amelie: Models und Controller
+Bent: View
 
-?  Preisberechnung -> Gutart, Gewicht, Route
+Das Programm ist für Kunden, die Waren verschiffen wollen. Daher können über das Menü keine zusätzlichen Routen oder Schiffe erstellt werden. 
 
-Feste Routen, Schiffe (können Route wechseln)
-//Güter können eingegeben werden.
-Güter können neuer Schiffsroute zugeordnet werden
-
-
-GUI: Bent
-    Javafx
-
-Controller: Amelie
-
-Schiff: überprüfen, ob Zuladung maxZuladung entspricht
+Die Personen werden (abgesehen von den Kaptänen) nicht weiter benutzt. Anfänglich war die Idee auch Personen auf den Schiffen mitfahren zu lassen, dies ist dann jedoch zu umfangreich geworden. Es wäre des Weiteren auch keine neue Herausforderung sondern nur Umschreiben von bereits vorhandenem Code. Dennoch sind natürlich Demodaten für Personen vorhanden und können ausgegeben werden.

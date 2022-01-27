@@ -2,22 +2,22 @@ package view;
 
 import java.util.Scanner;
 
-import controller.MenuController;
+import controller.MainController;
 
 public class Output {
 
     public Scanner scanner;
+    MainController mc;
     
 
-    public Output(){
-
+    public Output(MainController mc){
+        setMc(mc);
     }
 
     public void printData(String data){
         System.out.println(data);
     }
     
-
 
     /**
      * 
@@ -30,6 +30,12 @@ public class Output {
     }
     public Scanner getScanner() {
         return scanner;
+    }
+    public void setMc(MainController mc) {
+        this.mc = mc;
+    }
+    public MainController getMc() {
+        return mc;
     }
 
 }
