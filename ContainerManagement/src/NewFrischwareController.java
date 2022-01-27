@@ -17,7 +17,6 @@ public class NewFrischwareController {
     @FXML
     void FrischwareFertig(ActionEvent event) {
 
-        System.out.println("Frischware fertig");
         mc.getGc().printAllObjects();
 
        // Stage frischwareFertig = (Stage) tfGewicht.getScene().getWindow();
@@ -26,13 +25,15 @@ public class NewFrischwareController {
         String frischwareHaltbarkeit = tfHaltbarkeit.getText();
 
         System.out.println("Test 1");
-        gc.printAllObjects();
+        mc.getGc().printAllObjects();
         System.out.println("Test 2");
         gc.addNewFrischware(frischwareGewicht, frischwareInhalt, frischwareHaltbarkeit);
         System.out.println("Test 3");
         gc.printAllObjects();
         System.out.println("Test 4");
         
+        System.out.println("Frischware fertig");
+
     }
 
 }
