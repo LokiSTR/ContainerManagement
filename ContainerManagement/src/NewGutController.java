@@ -10,11 +10,12 @@ import javafx.scene.*;
 
 public class NewGutController {
 
+    //Variablem für den Seitenwechsel
     private Stage stage;
     private Scene scene;
     private Parent root;
 
-
+    //Zur Seite Frischware erschaffen 
     @FXML
     void createFrischware(ActionEvent event) throws IOException {
 
@@ -29,58 +30,69 @@ public class NewGutController {
 
     }
 
+    //Zur Seite Gefahrengut erschaffen 
     @FXML
-    void createGefahrengut(ActionEvent event) {
+    void createGefahrengut(ActionEvent event) throws IOException {
 
         System.out.println("Gefahrengut erstellen");
-/*        Parent root = FXMLLoader.load(getClass().getResource("NeueVerschiffung.fxml"));
+        root = FXMLLoader.load(getClass().getResource("view/Gefahrengut.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
         stage.setScene(scene);
-        stage.show */
+        stage.show();
     }
 
+    //Zur Seite Normalgut erschaffen 
     @FXML
-    void createNormalGut(ActionEvent event) {
+    void createNormalGut(ActionEvent event) throws IOException {
 
-        System.out.println("Gut erstellen");
-/*        Parent root = FXMLLoader.load(getClass().getResource("NeueVerschiffung.fxml"));
+        System.out.println("Normales Gut erstellen");
+        root = FXMLLoader.load(getClass().getResource("view/Normal.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
         stage.setScene(scene);
-        stage.show */
+        stage.show();
     }
 
+    //Zur Seite Tiere erschaffen 
     @FXML
-    void createTiere(ActionEvent event) {
+    void createTiere(ActionEvent event) throws IOException {
 
         System.out.println("Tier erstellen");
-/*        Parent root = FXMLLoader.load(getClass().getResource("NeueVerschiffung.fxml"));
+        root = FXMLLoader.load(getClass().getResource("view/Tier.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
         stage.setScene(scene);
-        stage.show */
+        stage.show();
     }
 
+    //Zur Seite Wertgegenstände erschaffen 
     @FXML
-    void createWertgegenstaende(ActionEvent event) {
+    void createWertgegenstaende(ActionEvent event) throws IOException {
 
         System.out.println("Wertgegenstand erstellen");
-/*        Parent root = FXMLLoader.load(getClass().getResource("NeueVerschiffung.fxml"));
+        root = FXMLLoader.load(getClass().getResource("view/Wertgegenstand.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
         stage.setScene(scene);
-        stage.show */
+        stage.show();
     }
 
+
+    //Eine Seite zurück gehen
     @FXML
     void zurueckAufMain(ActionEvent event) throws IOException {
 
-        System.out.println("Zurück auf Hauptseite");
+        //Zu finden im MainSceneController.java
         root = FXMLLoader.load(getClass().getResource("view/MainScene.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        //Scene wird als fxml geladen
         scene = new Scene(root);
-        //Stage bekommt die Scene
         stage.setScene(scene);
-        //Stage wird angezeigt
         stage.show();
+        
+        //Debugging
+        System.out.println("Zurück auf Hauptseite");
+
     }
 
 }

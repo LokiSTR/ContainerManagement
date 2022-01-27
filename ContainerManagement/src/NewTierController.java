@@ -11,9 +11,7 @@ import controller.MainController;
 import javafx.scene.Parent;
 import javafx.scene.*;
 
-
-
-public class NewFrischwareController {
+public class NewTierController {
 
     //Controllervariablen
     MainController mc;
@@ -28,35 +26,34 @@ public class NewFrischwareController {
     @FXML
     private TextField tfGewicht;
     @FXML
-    private TextField tfHaltbarkeit;
-    @FXML
     private TextField tfInhalt;
+    @FXML
+    private TextField tfTierart;
 
 
     /**
      * 
      * 
-     * FEHLER!! 
-     * PROBLEM NOCH NICHT GEFUNDEN
-     * java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-     * Caused by: java.lang.reflect.InvocationTargetException
-     * Caused by: java.lang.NullPointerException
-     * @throws IOException
+     * Gleicher Fehler, wie in NewFrischwareController.java
+     * Ausführlicher in NewFrischwareController.java
+     * 
      * 
      */
+
     @FXML
-    void FrischwareFertig(ActionEvent event) throws IOException {
+    void TierFertig(ActionEvent event) throws IOException {
 
         //TextField zu String konvertieren
         String gewicht = tfGewicht.getText();
         String inhalt = tfInhalt.getText();
-        String haltbarkeit = tfHaltbarkeit.getText();
+        String tierart = tfTierart.getText();
 
-        //mc.getGc().addNewFrischware(gewicht, inhalt, haltbarkeit);
-        mc.getGc().addNewFrischware(gewicht, inhalt, haltbarkeit);
-
+        //mc.getGc().addNewTiere(gewicht, inhalt, tierart);
+        mc.getGc().addNewTiere(gewicht, inhalt, tierart);
+        
         //Debugging
-        System.out.println("Frischware fertig");
+        System.out.println("Tier fertig");
+
 
         //Nach der fertigen Eingabe zurück auf die Startseite
         root = FXMLLoader.load(getClass().getResource("view/MainScene.fxml"));
@@ -67,15 +64,14 @@ public class NewFrischwareController {
 
         //Debugging
         System.out.println("Zurück auf die Startseite");
-      
+
+    
     }
 
-
-    //Funktion um eine Folie zurück zu gehen
+    //Um eine Seite zurück zu gehen
     @FXML
     void zurueck(ActionEvent event) throws IOException {
-    
-        //Zu finden im MainSceneController.java
+
         root = FXMLLoader.load(getClass().getResource("view/NeuesGutErstellen.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -84,18 +80,6 @@ public class NewFrischwareController {
 
         //Debugging
         System.out.println("Zurück auf vorherige Seite");
-
     }
 
-    /**
-     * 
-     * GETTER UND SETTER   
-     */
-    
-    public MainController getMc() {
-        return mc;
-    }
-    public void setMc(MainController mc) {
-        this.mc = mc;
-    }
 }

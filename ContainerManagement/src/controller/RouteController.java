@@ -16,6 +16,7 @@ public class RouteController extends ClassController{
     @Override
     public void createDemodata() {
         
+        
         getRouten().add(new Route("Hamburg", "New York", 18, 7000));
         getRouten().add(new Route("Hamburg", "Shanghai", 38, 12079));
         getRouten().add(new Route("Hamburg", "Dubai", 15, 5000));

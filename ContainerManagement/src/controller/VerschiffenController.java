@@ -19,7 +19,7 @@ public class VerschiffenController extends ClassController{
     //Neue Verschiffung, Datum ist in der Eingabe in Strings und wird anschließend umgewandelt.
     public void addNewVerschiffung(Schiff schiff, Route route, Gueter gut, String preis) {
 
-        Verschiffung vs = new Verschiffung(schiff,route,  gut, Double.parseDouble(preis));
+        Verschiffung vs = new Verschiffung(schiff ,route,  gut, Double.parseDouble(preis));
         getVerschiffungen().add(vs);
         
     }

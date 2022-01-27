@@ -21,6 +21,7 @@ public class SchiffController extends ClassController {
         quali1.add("Tiere");
         getSchiffe().add(new Schiff("Frieda",12000, getMc().getPc().getKapitaene().get(0), quali1));
 
+        
         ArrayList<String> quali2 = new ArrayList<String>();
         quali2.add("Gefahrengut");
         quali2.add("Wertgegenstände");
@@ -31,6 +32,8 @@ public class SchiffController extends ClassController {
         quali3.add("Tiere");
         quali3.add("Wertgegenstände");
         getSchiffe().add(new Schiff("Eugen", 158600, getMc().getPc().getKapitaene().get(2), quali3));
+        
+        
         
     }
 
