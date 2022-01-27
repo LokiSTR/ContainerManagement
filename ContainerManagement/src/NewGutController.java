@@ -16,13 +16,15 @@ public class NewGutController {
 
 
     @FXML
-    void createFrischware(ActionEvent event) {
+    void createFrischware(ActionEvent event) throws IOException {
 
         System.out.println("Frischware erstellen");
-/*        Parent root = FXMLLoader.load(getClass().getResource("NeueVerschiffung.fxml"));
+        //Zu finden im MainSceneController.java
+        root = FXMLLoader.load(getClass().getResource("view/Frischware.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
         stage.setScene(scene);
-        stage.show */
+        stage.show();
     }
 
     @FXML
