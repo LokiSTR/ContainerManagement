@@ -53,7 +53,7 @@ public class MainSceneController{
 
         System.out.println("Neue Verschiffung");
         //Zu finden im MainSceneController.java
-        root = FXMLLoader.load(getClass().getResource("view/NeuesGutErstellen.fxml"));
+        root = FXMLLoader.load(getClass().getResource("view/Verschiffung.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
