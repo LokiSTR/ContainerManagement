@@ -25,7 +25,6 @@ public class MainWindow extends Application {
   Parent root = FXMLLoader.load(getClass().getResource("MainScene.fxml"));
   Scene scene = new Scene(root);
   */
-  
     Scene scene = new Scene(root, 300, 250);
   
     primaryStage.setTitle("Container Management");

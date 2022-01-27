@@ -31,6 +31,7 @@ public class GueterController extends ClassController{
         Frischware fw = new Frischware( Double.parseDouble(gewicht), inhalt, haltbarkeit);
         getGueterAr().add(fw);
     }
+    
 
     public void addNewGefahrengut(String sicherheitslevel, String inhalt) {
         //Neues Gefahrengut hinzufügen und gueterAr hinzufügen

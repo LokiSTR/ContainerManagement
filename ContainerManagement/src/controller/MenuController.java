@@ -67,6 +67,7 @@ public class MenuController {
            sendOutput("Falsche Eingabe");
        }
     }
+    
 
     public void showMenu() {
         String auswahl = "1"; //getMc().getOutput()
@@ -176,7 +177,7 @@ public class MenuController {
 
 
     /*
-    
+
     public void startMenu(){
         System.out.println("Eingaben überprüfen");
     
