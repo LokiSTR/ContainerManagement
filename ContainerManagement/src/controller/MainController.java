@@ -1,25 +1,25 @@
 package controller;
 
-//import MainSceneController;
+// import NewFrischwareController;
 import view.Output;
+
 
 public class MainController {
     
     Output output;
     GueterController gc;
-    //MainSceneController msc;
     MenuController menuc;
     PersonenController pc;
     RouteController rc;
     SchiffController sc;
     VerschiffenController vc;
-    
+    // NewFrischwareController fc;    
 
 
 
     public MainController() {
         setGc(new GueterController(this));
-//        setMsc(new MainSceneController(this));
+        // setFc(new NewFrischwareController(this));
         setPc(new PersonenController(this));
         setMenuc(new MenuController(this));
         setVc(new VerschiffenController(this));
@@ -54,6 +54,7 @@ public class MainController {
         getVc().printAllObjects();
     }
 
+
     /**
      * 
      * SETTER UND GETTER
@@ -77,12 +78,12 @@ public class MainController {
      public MenuController getMenuc() {
          return menuc;
      }
-     /*public void setMsc(MainSceneController msc) {
-         this.msc = msc;
+    /* public NewFrischwareController getFc() {
+         return fc;
      }
-     public MainSceneController getMsc() {
-         return msc;
-     }*/
+     public void setFc(NewFrischwareController fc) {
+         this.fc = fc;
+     }      */
      public void setPc(PersonenController pc) {
          this.pc = pc;
      }

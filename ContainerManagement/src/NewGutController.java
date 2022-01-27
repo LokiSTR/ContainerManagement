@@ -10,9 +10,9 @@ import javafx.scene.*;
 
 public class NewGutController {
 
-    public Stage stage;
-    public Scene scene;
-    public Parent root;
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
 
 
     @FXML
@@ -24,7 +24,9 @@ public class NewGutController {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
-        stage.show();
+        stage.show();   
+        System.out.println("Frischware erstellen");
+
     }
 
     @FXML

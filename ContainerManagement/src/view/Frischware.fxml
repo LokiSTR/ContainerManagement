@@ -11,7 +11,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NewFrischwareController">
    <children>
-      <VBox layoutX="100.0" layoutY="41.0" spacing="40.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0">
+      <VBox alignment="CENTER" layoutX="100.0" layoutY="41.0" spacing="40.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="30.0">
          <children>
             <HBox alignment="TOP_CENTER">
                <children>
@@ -25,11 +25,8 @@
             <TextField fx:id="tfGewicht" promptText="Gewicht" />
             <TextField fx:id="tfInhalt" promptText="Inhalt" />
             <TextField fx:id="tfHaltbarkeit" promptText="Haltbarkeit (dd.mm.yyyy)" />
-            <HBox alignment="CENTER">
-               <children>
-                  <Button mnemonicParsing="false" onAction="#FrischwareFertig" text="Ok" />
-               </children>
-            </HBox>
+            <Button mnemonicParsing="false" onAction="#FrischwareFertig" text="Ok" />
+            <Button mnemonicParsing="false" onAction="#zurueck" text="Zurück" />
          </children>
       </VBox>
    </children>
